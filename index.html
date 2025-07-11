@@ -3,19 +3,30 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Neon Attack Header</title>
+<title>Neon Attack</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Marquee Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Marquee Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="top-bar">
         <div class="top-bar-message">Best Deals Ever, FLAT 20% OFF SITE-WIDE + FREE Smiley Neon Sign on orders above 6K. Discount Applied Automatically at Cart</div>
     </div>
+    <!--header start-->
     <header>
+       <!--header logo start-->
         <div class="logo" aria-label="Neon Attack Logo">
             <span class="neon-text">NEON</span>
             <span class="attack-text">attack</span>
         </div>
+         <!--header logo end-->
+         <!--navigation button only for mobile start-->
         <button class="mobile-menu-btn" aria-label="Open menu">
                 <svg viewBox="0 0 32 32">
                         <line x1="6" y1="10" x2="26" y2="10" />
@@ -23,6 +34,8 @@
                         <line x1="6" y1="22" x2="26" y2="22" />
                 </svg>
         </button>
+        <!--navigation button only for mobile end-->
+        <!--header section start-->
         <nav>
         <ul class="text-sm">
             <li tabindex="0">
@@ -42,20 +55,26 @@
             </li>
         </ul>
         </nav>
+        <!--header section end-->
+        <!--header search icon start-->
         <div class="icons" role="navigation" aria-label="Site navigation icons">
-            <button aria-label="Search" tabindex="0">
+            <button aria-label="Search" tabindex="0" class="icon-btn">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <circle cx="11" cy="11" r="7" />
                     <line x1="16.65" y1="16.65" x2="21" y2="21" />
                 </svg>
             </button>
-            <button aria-label="User Account" tabindex="0">
+            <!--header search icon end-->
+            <!--header account icon start-->
+            <button aria-label="User Account" tabindex="0" class="icon-btn">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <circle cx="12" cy="8" r="4" />
                     <path d="M4 20c0-4 8-4 8-4s8 0 8 4" />
                 </svg>
             </button>
-            <button aria-label="Shopping Cart" tabindex="0">
+            <!--header account icon end-->
+            <!--header cart icon start-->
+            <button aria-label="Shopping Cart" tabindex="0" class="icon-btn">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M6 6h15l-1.5 9h-13z" />
                     <circle cx="9" cy="20" r="1" />
@@ -63,71 +82,55 @@
                 </svg>
                 <span class="cart-count" aria-live="polite" aria-atomic="true">0</span>
             </button>
+            <!--header cart icon end-->
         </div>
     </header>
-    <main>
-    <!-- Brand header area -->
-    <div class="brand-header mb-10 max-w-7xl mx-auto flex flex-col items-center justify-center gap-2 pb-2 text-center">
-      <div class="brand-header-line-top"></div>
-      <div class="flex flex-col items-start text-left w-full">
-        <h1 class="brand-part1">India’s No.1</h1>
-        <h2 class="brand-part2 signature-font">neon lights brand</h2></div>
+    <!--header End-->
+    <!--home page Heading start-->
+    <div class="headline-container" role="banner" aria-label="Introduction text">
+    <div class="headline-left" aria-label="Brand headline">
+      <strong>India’s No.  1</strong><br />
+      <span class="neon-yellow" style="margin-top: 1px; display: inline-block;">neon lights brand</span>
     </div>
-    <!-- Promo Container -->
-    <section class="promo-container max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-center gap-8">
-      <!-- Flash Saving -->
-      <div class="flex flex-col text-center space-y-1 md:w-1/5">
-        <div class="neon-pink-outline uppercase text-[1.25rem] font-semibold tracking-widest">FLASH</div>
-        <div class="neon-glow-green uppercase text-5xl font-extrabold tracking-widest">SAVING</div>
-        <div class="neon-text text-sm italic" style="font-family: 'Pacifico', cursive;">Days</div>
-      </div>
-      <!-- Ticket Flat 20% -->
-      <div class="ticket flex flex-col justify-center items-center text-white uppercase md:w-1/5">
-        <div class="text-4xl font-extrabold leading-none select-none">FLAT</div>
-        <div class="text-[4rem] font-extrabold leading-none -mb-2">20<span class="text-xl align-top">%</span></div>
-        <div class="text-xl font-bold mt-0 select-none">OFF</div>
-        <div class="text-lg font-semibold mt-0 select-none">SITE-WIDE</div>
-      </div>
-      <!-- Plus circle -->
-      <div class="plus-circle md:w-1/12 flex-shrink-0">+</div>
-      <!-- Smiley neon with arc text and FREE! -->
-      <div class="relative neon-text-arc-container flex flex-col items-center justify-center md:w-1/4" style="position:relative;">
-        <div class="free-text">FREE!</div>
-        <div class="smiley-emoji-container relative">
-          <div class="neon-circle" role="img" aria-label="Smiley face neon light with bright yellow glow">
-            <img 
-              src="photos/hihihihihiiiii.jpeg" 
-              alt="Bright yellow smiley emoji face with sparkling neon light ring glow effect" 
-              style="width:120px; height:120px; display:block; margin:auto; border-radius:50%;"
-              onerror="this.style.display='none';"
-            />
-          </div>
+    <div class="headline-right" aria-label="Brand description">
+      Experience world-class craftsmanship with LED Neon Signs that brighten up your space and match your aesthetic.
+    </div>
+    <!--home page Heading end-->
+    <!--home page img start-->
+  </div>
+  <div class="responsive-img-container" style="width: 100%; max-width: 1150px; height: 400px; margin: 0 auto; overflow: hidden; border-radius: 16px; display: flex; align-items: center; justify-content: center; border: 2px solid rgb(106, 104, 104);">
+    <img src="home img.jpg" alt="Neon brand" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+  </div>
+   <!--home page img  end-->
+  <!-- Marquee Section Start -->
+    <div class="marquee-container">
+        <div class="marquee-track" id="marqueeTrack">
+            <div class="marquee-item">
+                <i class="fas fa-rocket marquee-icon"></i>
+                <span>4.6<i class="fa fa-star" aria-hidden="true"></i>Rating By 20k+Customers</span>
+            </div>
+            <div class="marquee-item">
+              <i class="fa fa-trophy fa-tag marquee-icon"></i>
+                <span>Top-Notch Quality</span>
+            </div>
+            <div class="marquee-item">
+                <i class="fas fa-calendar-alt marquee-icon"></i>
+                <span>Value for Money</span>
+            </div>
+            <div class="marquee-item">
+                <i class="fas fa-award marquee-icon"></i>
+                <span>100% Timely Delivery</span>
+            </div>
+            <div class="marquee-item">
+                <i class="fas fa-truck marquee-icon"></i>
+                <span>2 Year Warranty</span>
+            </div>
         </div>
-        <!-- Arc shaped text around smiley -->
-        <svg viewBox="0 0 200 200" class="neon-text-arc absolute top-0 left-0 w-full h-full pointer-events-none" aria-hidden="true" style="width:190px; height:190px; margin-left:-29px; margin-top:-39px;">
-          <defs>
-            <path id="arcPath" d="M 36, 100 A 64,64 0 1,1 164,100" />
-          </defs>
-          <text fill="white" font-family="'Montserrat', sans-serif" font-weight="700" font-size="14" aria-hidden="true">
-            <textPath xlink:href="#arcPath" startOffset="50%" text-anchor="middle">
-              Smiley Neon Light worth Rs.4000
-            </textPath>
-          </text>
-        </svg>
-      </div>
-      <!-- Shop Now button with neon glow effect -->
-      <div class="w-full flex justify-center mt-8">
-        <button class="button-neon px-8 py-3 rounded-lg min-w-[160px] flex justify-center items-center font-semibold text-lg tracking-widest">
-          SHOP NOW
-          <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="9" cy="21" r="1"></circle>
-            <circle cx="20" cy="21" r="1"></circle>
-            <path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.97-1.56l1.38-7.82H6"></path>
-          </svg>
-        </button>
-      </div>
-    </section>
-  </main>
-    <script src="script.js"></script>
+    </div>
+    <!-- Marquee Section End -->
+
+    
+</body>
+<script src="script.js"></script>
 </body>
 </html>
