@@ -1,3 +1,99 @@
+/* Icon button hover effect */
+.icon-btn {
+  background: none;
+  border: 2px solid transparent;
+  padding: 8px;
+  border-radius: 50%;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+}
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .headline-container {
+    flex-direction: column;
+    padding: 12px 8px;
+    gap: 8px;
+  }
+  .headline-left, .headline-right {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 4px;
+  }
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  .attack-text {
+    font-size: 1.5rem;
+  }
+  .neon-text {
+    font-size: 1.5rem;
+  }
+  .top-bar-message {
+    font-size: 0.9rem;
+    padding: 4px 2px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 0;
+  }
+  .icons {
+    gap: 8px;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .headline-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .headline-left, .headline-right {
+    width: 100%;
+    margin: 0;
+  }
+  .headline-left strong {
+    font-size: 1.1rem;
+  }
+  .headline-left .neon-yellow {
+    font-size: 1rem;
+  }
+  .headline-right {
+    font-size: 0.95rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .cart-count {
+    font-size: 0.9rem;
+    top: 0;
+    right: 0;
+  }
+  /* Responsive image container */
+  .responsive-img-container {
+    max-width: 100vw !important;
+    height: 180px !important;
+    min-height: 120px;
+  }
+  .responsive-img-container img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover;
+  }
+}
+.icon-btn:hover, .icon-btn:focus {
+  background: rgba(255, 255, 0, 0.08);
+  border-color: #ffd600;
+  box-shadow: 0 0 12px 2px #ffd600, 0 0 32px 8px #fffde7;
+  outline: none;
+}
+.icon-btn svg {
+  transition: stroke 0.2s, fill 0.2s, filter 0.2s;
+}
+.icon-btn:hover svg, .icon-btn:focus svg {
+  stroke: #ffd600;
+  filter: drop-shadow(0 0 6px #ffd600);
+}
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pacifico&display=swap');
 
 body {
@@ -49,6 +145,13 @@ header {
   -webkit-text-stroke: 1.5px white;
   color: transparent;
   position: relative;
+  text-shadow:
+        0 0 5px #d7dbc0,
+        0 0 10px #d9ff00,
+        0 0 20px #d9ff00,
+        0 0 30px #c4fa00,
+        0 0 40px #b4eb00,
+        0 0 70px #b4eb00;
 }
 .logo .attack-text {
   font-family: 'Pacifico', cursive;
@@ -230,333 +333,111 @@ nav ul li:hover {
   outline: 2px solid #00dd8f;
   outline-offset: 2px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&display=swap');
 
-  /* Neon text styles */
-  .neon-text {
-    text-shadow:
-      0 0 5px #fff,
-      0 0 10px #fff,
-      0 0 20px #7efff5,
-      0 0 30px #7efff5,
-      0 0 40px #7efff5,
-      0 0 55px #7efff5,
-      0 0 75px #7efff5;
-    color: #7efff5;
-  }
-
-  .neon-glow-green {
-    color: #c0ff33;
-    text-shadow:
-      0 0 5px #c0ff33,
-      0 0 10px #c0ff33,
-      0 0 20px #97f050,
-      0 0 30px #97f050,
-      0 0 40px #97f050,
-      0 0 55px #97f050,
-      0 0 75px #97f050;
-  }
-
-  .neon-pink-outline {
-    color: #fff0f8;
-    text-shadow:
-      0 0 4px #ffefff,
-      0 0 6px #ffbbff,
-      0 0 8px #ff77ff,
-      0 0 10px #ff77ff;
-  }
-
-  .handwritten-neon {
-    font-family: 'Pacifico', cursive;
-    color: #d9ff00;
-    text-shadow:
-      0 0 3px #d9ff00,
-      0 0 7px #d9ff00,
-      0 0 10px #aaff00,
-      0 0 15px #95ef00;
-  }
-
-  .button-neon {
-    background: #2563eb;
-    border: 2px solid #7efff5;
-    color: #dafff8;
-    box-shadow:
-      0 0 5px #7efff5,
-      0 0 10px #7efff5,
-      0 0 20px #7efff5,
-      inset 0 0 10px #7efff5;
-    transition: all 0.3s ease;
-  }
-  .button-neon:hover {
-    background: #7efff5;
-    color: #011f27;
-    box-shadow:
-      0 0 20px #7efff5,
-      0 0 30px #7efff5,
-      0 0 40px #7efff5,
-      0 0 50px #7efff5;
-  }
-
-  /* Purple ticket shape with neon border */
-  .ticket {
-    background: linear-gradient(90deg, #4b28a6, #6651d1);
-    border: 2px solid #7e99ff;
-    box-shadow:
-      0 0 10px #aabaff,
-      0 0 20px #8899ff,
-      0 0 30px #6651d1 inset;
-    border-radius: 10px;
-    position: relative;
-    padding: 1rem 2rem;
-    width: 180px;
-    text-align: center;
-  }
-  .ticket::before, .ticket::after {
-    content: "";
-    position: absolute;
-    background: #6651d1;
-    width: 20px;
-    height: 25px;
-    top: 0;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 0 10px #8899ff;
-  }
-  .ticket::before {
-    left: -20px;
-  }
-  .ticket::after {
-    right: -20px;
-  }
-
-  /* Neon circle for smiley */
-  .neon-circle {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    box-shadow:
-      0 0 8px #fff347,
-      0 0 20px #fff347,
-      0 0 30px #fefc5b;
-    background: yellow;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .smiley-emoji-container {
-    position: relative;
-  }
-
-  .neon-text-arc {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 190px;
-    height: 190px;
-    margin-left: -95px;
-    margin-top: -95px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  .arc-text {
-    position: absolute;
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    transform-origin: 50% 100%;
-  }
-
-  .arc-text span {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 50%;
-    top: 50%;
-    margin-left: -10px;
-    margin-top: -10px;
-    color: white;
-  }
-
-  /* Green free text */
-  .free-text {
-    font-weight: 900;
-    color: #00ff53;
-    text-shadow:
-      0 0 8px #00ff53,
-      0 0 10px #00ff53,
-      0 0 15px #00ff53;
-    position: absolute;
-    bottom: 30%;
-    left: 40px;
-    transform: rotate(-90deg);
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  /* Plus glow circle */
-  .plus-circle {
-    border: 2px solid #81a0ff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    color: #89a6ff;
-    font-weight: 900;
-    text-align: center;
-    line-height: 46px;
-    font-size: 28px;
-    text-shadow:
-      0 0 4px #81a0ff,
-      0 0 8px #81a0ff;
-    box-shadow:
-      0 0 4px #81a0ff,
-      0 0 8px #81a0ff;
-  }
-
-  /* Container background gradient */
-  .promo-container {
-    background: radial-gradient(circle at center, #1c166e, #090938, #00001a);
-    border-radius: 12px;
-    padding: 2.5rem 3rem;
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* Small shadow for smiley eyes */
-  .smiley-eyes {
-    display: flex;
-    gap: 40px;
-    position: relative;
-    top: 10px;
-  }
-
-  /* Smiley content */
-  .smiley-face {
-    width: 70px;
-    height: 70px;
-    background: radial-gradient(circle at 20% 30%, #222 12%, transparent 40%), radial-gradient(circle at 80% 30%, #222 12%, transparent 40%);
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .smiley-face::after {
-    content: "";
-    position: absolute;
-    bottom: 18px;
-    left: 15px;
-    width: 40px;
-    height: 25px;
-    border: 3px solid #111;
-    border-top: none;
-    border-radius: 0 0 50px 50px;
-    box-shadow: 0 0 12px #000;
-  }
-
-  /* Text styling for brand portion */
-  .brand-part1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 2rem;
-    color: white;
-    margin-left: 140px;
-  }
-  .brand-part2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #d9ff00;
-    text-shadow:
-      0 0 10px #d9ff00,
-      0 0 20px #aaff00,
-      0 0 30px #aaff00;
-    margin-left: 160px;
-  }
-
-  .brand-header {
-    min-height: 220px;
-  }
-  .brand-header .flex {
-    align-items: flex-start;
-    text-align: left;
-    width: 100%;
-  }
-
-  .brand-header-line-top {
-    width: 120px;
-    height: 3px;
-    background: linear-gradient(90deg, #7efff5 0%, #d9ff00 100%);
-    margin: 0 auto 18px auto;
-    border-radius: 2px;
-  }
-  @media (max-width: 768px) {
-    .brand-header {
-      min-height: 120px;
-      padding: 16px 0 10px 0;
+    body {
+      background-color: #000000;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
     }
-    .brand-header-line-top {
-      width: 60px;
-      height: 2px;
-      margin-bottom: 10px;
+
+    .neon-yellow {
+      color: #d9ff00;
+      font-family: 'Pacifico', cursive;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-shadow:
+        0 0 5px #d9ff00,
+        0 0 10px #d9ff00,
+        0 0 20px #d9ff00,
+        0 0 30px #c4fa00,
+        0 0 40px #b4eb00,
+        0 0 70px #b4eb00;
     }
-    .brand-header .flex {
-      align-items: flex-start;
-      text-align: left;
-      width: 100%;
-      padding-left: 10px;
+
+    .headline-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+      gap: 1rem;
     }
-    .brand-header .brand-part1 {
-      margin-left: 0;
-      font-size: 1.1rem;
+
+    .headline-left {
+      flex-basis: 45%;
+      border-right: 1px solid #444;
+      padding-right: 1rem;
+      font-size: 2rem;
     }
-    .brand-header .brand-part2.signature-font {
-      font-size: 1.1rem;
-      margin-left: 0;
+
+    .headline-left strong {
+      font-weight: 700;
+      font-size: 2.5rem;
     }
-    .promo-container {
-      flex-direction: column;
-      gap: 2rem;
-      padding: 2rem 1.5rem;
-      align-items: stretch;
+
+    .headline-right {
+      flex-basis: 45%;
+      padding-left: 1rem;
+      font-weight: 400;
+      font-size: 1.15rem;
+      line-height: 1.5;
     }
-    .ticket {
-      width: 100%;
-      max-width: 320px;
-      padding: 1.5rem 1rem;
-    }
-    .neon-circle {
-      width: 90px;
-      height: 90px;
-    }
-    .neon-text-arc {
-      width: 120px !important;
-      height: 120px !important;
-      margin-left: -60px !important;
-      margin-top: -60px !important;
-    }
-    .free-text {
-      left: -20px;
-      bottom: 20%;
-      font-size: 12px;
-    }
-    .plus-circle {
-      width: 30px;
-      height: 30px;
-      line-height: 28px;
-      font-size: 18px;
-    }
-    .button-neon {
-      min-width: 120px;
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-    }
-  }
+    .marquee-container {
+            width: 100%;
+            max-width: 1200px;
+            overflow: hidden;
+            position: relative;
+            background: transparent;
+            padding: 1.5rem 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 0rem auto;
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+        .marquee-item {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            margin-right: 4rem;
+            font-size: 1.5rem;
+        }
+        .marquee-item span {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #8a2be2, #ffd700, #ff0080);
+            background-size: 200% auto;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: marquee-gradient 4s linear infinite alternate;
+            letter-spacing: 1px;
+        }
+        @keyframes marquee-gradient {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .marquee-icon {
+            margin-right: 1rem;
+            color: #4a6bff;
+            font-size: 2rem;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @media (max-width: 768px) {
+            .marquee-item { font-size: 1.2rem; }
+            .marquee-icon { font-size: 1.5rem; }
+        }
