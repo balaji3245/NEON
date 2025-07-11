@@ -1,4 +1,3 @@
-// Animate nav links one by one when menu opens (mobile)
 document.addEventListener('DOMContentLoaded', function() {
   var menuBtn = document.querySelector('.mobile-menu-btn');
   if (!menuBtn) return;
@@ -24,3 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+        const marqueeTrack = document.getElementById('marqueeTrack');
+        // Duplicate items for seamless looping
+        const items = Array.from(marqueeTrack.children);
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            marqueeTrack.appendChild(clone);
+        });
+        // Adjust animation time based on length (slower speed)
+        marqueeTrack.style.animationDuration = `${items.length * 4}s`;
+    });
