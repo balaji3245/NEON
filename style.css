@@ -575,7 +575,7 @@ nav ul li:hover {
         }
 
         .card {
-            flex-grow: 1;
+            flex-grow: 2;
           flex-basis: 200;
             position: relative;
             width: 220px;
