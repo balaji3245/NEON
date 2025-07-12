@@ -1,3 +1,87 @@
+.new-section-text p {
+    font-family: 'Centaur', serif;
+}
+/* Reach button styles for new section */
+.reach-btn {
+    margin-top: 1.5rem;
+    
+    padding: 0.45rem 2.2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #181818;
+    background: linear-gradient(90deg, #d9ff00 0%, #00dd8f 100%);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px #00dd8f44;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+}
+.reach-btn:hover, .reach-btn:focus {
+    background: linear-gradient(90deg, #00dd8f 0%, #d9ff00 100%);
+    color: #000;
+    box-shadow: 0 4px 24px #d9ff0044;
+    outline: none;
+}
+/* Why Choose Neon Attack section styles */
+.new-section {
+    width: 100%;
+    padding: 32px 0;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+}
+
+.new-section-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
+    background-color: transparent;
+}
+
+.new-section-text {
+    flex: 1 1 320px;
+    min-width: 260px;
+}
+
+.new-section-img {
+    flex: 1 1 320px;
+    min-width: 260px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.new-section-image {
+    max-width: 440px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px #0008;
+    min-width: 220px;
+    min-height: 220px;
+}
+.new-section-text h2 {
+    font-size: 2.7rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    font-family: 'Arial Black', Arial, sans-serif;
+}
+/* Simple Footer Styles */
+.simple-footer {
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0 12px 0;
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    letter-spacing: 1px;
+}
 /* Icon button hover effect */
 .icon-btn {
   background: none;
@@ -441,3 +525,251 @@ nav ul li:hover {
             .marquee-item { font-size: 1.2rem; }
             .marquee-icon { font-size: 1.5rem; }
         }
+        .cards-outer-container {
+            width: 100%;
+            display: none;
+            justify-content: center;
+            align-items: flex-start;
+            /* border removed */
+            /* border-image removed */
+            border-radius: 32px 80px 32px 80px/80px 32px 80px 32px;
+            box-sizing: border-box;
+            padding: 1.5rem 0;
+            background: transparent;
+        }
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --transition-speed: 0.35s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 2rem;
+        }
+
+        .card-container {
+            display: grid;
+            gap: 0.05rem;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card {
+            position: relative;
+            width: 220px;
+            height: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all var(--transition-speed) ease;
+            transform: translateY(0);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card__image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .card:hover .card__image img {
+            transform: scale(1.05);
+        }
+
+        .card__badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(90deg, #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000);
+            background-size: 400% 400%;
+            animation: badgeGlow 8s linear infinite;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all var(--transition-speed) ease;
+        @keyframes badgeGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        }
+
+        .card:hover .card__badge {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card__content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            color: white;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            transform: translateY(30px);
+            transition: transform var(--transition-speed) ease;
+        }
+        
+        .card:hover .card__content {
+            transform: translateY(0);
+        }
+
+        .card__title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .card:hover .card__title {
+            color: rgb(233, 227, 49);
+        }
+
+        .card__description {
+            font-size: 0.8rem;
+            line-height: 1.4;
+            margin-bottom: 0.8rem;
+            opacity: 0;
+            transition: opacity var(--transition-speed) ease;
+        }
+        
+        .card:hover .card__description {
+            opacity: 1;
+        }
+
+        .card__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card__price {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #fff;
+            background: none;
+            -webkit-background-clip: initial;
+            -webkit-text-fill-color: initial;
+            background-clip: initial;
+        }
+
+        .card__button {
+            margin: 0;
+            padding: 8px 18px;
+            border: none;
+            outline: none;
+            color: #cbd14f;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.7rem;
+            text-decoration: none;
+            transition: all var(--transition-speed) ease;
+            opacity: 0;
+        }
+        .card__button::after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        .card__button::before {
+            content: "";
+            background: linear-gradient(
+                45deg,
+                #FF0000, #FF7300, #FFFB00, #48FF00,
+                #00FFD5, #002BFF, #FF00C8, #FF0000
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 600%;
+            z-index: -1;
+            width: calc(100% + 4px);
+            height:  calc(100% + 4px);
+            filter: blur(8px);
+            animation: glowing 20s linear infinite;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+            opacity: 0;
+        }
+        @keyframes glowing {
+            0% {background-position: 0 0;}
+            50% {background-position: 400% 0;}
+            100% {background-position: 0 0;}
+        }
+        .card__button:hover::before {
+            opacity: 1;
+        }
+        .card__button:active:after {
+            background: transparent;
+        }
+        .card__button:active {
+            color: #000;
+            font-weight: bold;
+        }
+
+        .card:hover .card__button {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card__button:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Animation for the hover effect */
+        @keyframes cardHover {
+            0% {
+                transform: translateY(0) scale(1);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+            100% {
+                transform: translateY(-10px) scale(1.01);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            }
+        }
+        
